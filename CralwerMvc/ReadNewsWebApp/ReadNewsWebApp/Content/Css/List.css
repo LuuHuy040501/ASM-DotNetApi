@@ -1,0 +1,84 @@
+﻿.section-header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.section-header h2 {
+    font-size: 40px;
+}
+
+.article-list {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.article-item {
+    padding: 10px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #efefef;
+}
+
+.article-infor {
+    padding: 0px 15px;
+}
+
+.article-title {
+    display: block;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.detail-link {
+    color: black;
+    text-decoration: none;
+}
+
+.detail-link:hover {
+    color: #2F91D6;
+    text-decoration: none;
+ }
+
+.detail-link:visited, .detail-link:link {
+    text-decoration: none;
+}
+
+.article-description {
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+.article-description.no-img {
+    width: 83%;
+}
+
+.page-separate {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+.pagination li.active a {
+    background-color: #9F224E;
+    color: #fff;
+}
+
+.pagination li.active a:hover {
+    background-color: #9F224E;
+}
+
+.pagination li a {
+    display: inline-block;
+    border: 1px solid #E5E5E5;
+    margin: 0 10px;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+    color: #757575;
+}
+
+.pagination li a:hover {
+    color: #757575;
+}

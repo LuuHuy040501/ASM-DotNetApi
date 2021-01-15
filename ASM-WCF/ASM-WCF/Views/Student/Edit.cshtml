@@ -1,0 +1,92 @@
+﻿@model ASM_WCF.Models.StudentViewModel
+
+@{
+    ViewBag.Title = "Sửa thông tin";
+}
+
+<h2>Sửa thông tin sinh viên</h2>
+
+
+@using (Html.BeginForm("Edit", "Student", "POST"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Điền thông tin cần sửa</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.RolleNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RolleNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RolleNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Genre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @if (Model.Genre == ASM_WCF.Models.StudentViewModel.StudentGenre.Male)
+                {
+                    @Html.RadioButtonFor(model => model.Genre, 1, new { id = "male", @checked = "true", style = "margin-right:5px" })
+                    @Html.Label("male", "Nam", new { style = "margin-right: 20px" })
+                    @Html.RadioButtonFor(model => model.Genre, 0, new { id = "female", style = "margin-right: 5px" })
+                    @Html.Label("female", "Nữ")
+
+                }
+                else
+                {
+                    @Html.RadioButtonFor(model => model.Genre, 1, new { id = "male", style = "margin-right:5px" })
+                    @Html.Label("male", "Nam", new { style = "margin-right: 20px" })
+                    @Html.RadioButtonFor(model => model.Genre, 0, new { id = "female", style = "margin-right: 5px", @checked = "true" })
+                    @Html.Label("female", "Nữ")
+
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Birthday, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="date" value="@Model.Birthday.ToString("yyyy-MM-dd")" class="form-control" name="Birthday" id="Birthday" />
+                @Html.ValidationMessageFor(model => model.Birthday, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Introduction, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Introduction, new { @class = "form-control", style = "height: 100px" })
+                @Html.ValidationMessageFor(model => model.Introduction, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu thông tin" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

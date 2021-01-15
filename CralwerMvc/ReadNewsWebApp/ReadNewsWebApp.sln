@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadNewsWebApp", "ReadNewsWebApp\ReadNewsWebApp.csproj", "{4CE142F4-4AA0-4FE5-94BC-89799E2FE04F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CE142F4-4AA0-4FE5-94BC-89799E2FE04F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE142F4-4AA0-4FE5-94BC-89799E2FE04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE142F4-4AA0-4FE5-94BC-89799E2FE04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE142F4-4AA0-4FE5-94BC-89799E2FE04F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BFB176C-782F-4D56-B505-8F25DAB75425}
+	EndGlobalSection
+EndGlobal

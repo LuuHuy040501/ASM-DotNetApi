@@ -1,0 +1,7 @@
+E:\APTECH FPT\DOT-NET-WEB-API\ASM-WCF\WcfService1\bin\WcfService1.dll.config
+E:\APTECH FPT\DOT-NET-WEB-API\ASM-WCF\WcfService1\bin\WcfService1.dll
+E:\APTECH FPT\DOT-NET-WEB-API\ASM-WCF\WcfService1\bin\WcfService1.pdb
+E:\APTECH FPT\DOT-NET-WEB-API\ASM-WCF\WcfService1\obj\Debug\WcfService1.csprojAssemblyReference.cache
+E:\APTECH FPT\DOT-NET-WEB-API\ASM-WCF\WcfService1\obj\Debug\WcfService1.csproj.CoreCompileInputs.cache
+E:\APTECH FPT\DOT-NET-WEB-API\ASM-WCF\WcfService1\obj\Debug\WcfService1.dll
+E:\APTECH FPT\DOT-NET-WEB-API\ASM-WCF\WcfService1\obj\Debug\WcfService1.pdb

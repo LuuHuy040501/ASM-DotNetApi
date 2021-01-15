@@ -1,0 +1,67 @@
+﻿.article {
+    margin-top: 50px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.article-header {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+    .article-header .article-title {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .article-header .article-description {
+        margin-top: 20px;
+        padding-left: 35px;
+    }
+
+.article-content {
+    padding: 0px 30px;
+}
+
+    .article-content .article-para {
+        margin-bottom: 25px;
+        text-indent: 30px;
+    }
+
+.article-figure {
+    width: 75%;
+    margin: 20px auto;
+}
+
+    .article-figure .article-img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .article-figure .article-img-caption {
+        font-size: 16px;
+    }
+
+.article-relate {
+    padding-left: 40px;
+    height: 200px;
+}
+
+.relate-right {
+    position: relative;
+    height: 100%;
+}
+
+.relate-right .back-btn {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+}
+
+.relate-list {
+    height: 100%;
+}

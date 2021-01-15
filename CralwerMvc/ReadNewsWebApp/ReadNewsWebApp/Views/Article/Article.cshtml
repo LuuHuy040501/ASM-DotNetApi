@@ -1,0 +1,36 @@
+﻿@model ReadNewsWebApp.Models.Article
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+@section PageStyle {
+    <link href="@Url.Content("~/Content/Css/Article.css")" rel="stylesheet" type="text/css" />
+}
+
+<div class="article container">
+    <div class="article-header">
+        <h2 class="article-title">@Model.Title</h2>
+        <p class="article-description">@Model.Description</p>
+    </div>
+    <!-- html content-->
+    <div class="article-content">
+        @Html.Raw(Model.HtmlContent)
+    </div>
+    <hr />
+    <div class="article-relate">
+        <h4 class="section-header">Tin liên quan</h4>
+        <div class="col-md-9 relate-list">
+            <ul>
+                @foreach (var item in (IEnumerable<ReadNewsWebApp.Models.Article>)ViewBag.realtedArticle)
+                {
+                    <li>@Html.ActionLink(item.Title, "Read", new { id = item.Id })</li>
+                }
+            </ul>
+        </div>
+        <div class="col-md-3 relate-right">
+            <p class="back-btn">@Html.ActionLink("Quay lại", "Index")</p>
+        </div>
+    </div>
+</div>
+

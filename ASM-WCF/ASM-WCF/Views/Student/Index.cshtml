@@ -1,0 +1,94 @@
+﻿@model IEnumerable<ASM_WCF.Models.StudentViewModel>
+
+@{
+    ViewBag.Title = "Quản lý sinh viên";
+}
+
+<h2>Quản lý sinh viên</h2>
+<h3>Danh sách sinh viên</h3>
+
+<p>
+    @Html.ActionLink("Tạo mới SV", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RolleNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birthday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Introduction)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RolleNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @if (item.Genre == ASM_WCF.Models.StudentViewModel.StudentGenre.Male)
+                {
+                    <span>Nam</span>
+                }
+                else
+                {
+                    <span>Nữ</span>
+                }
+            </td>
+            <td>
+                <p>@item.Birthday.ToShortDateString()</p>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <p style="word-wrap: break-word; width: 300px">@item.Introduction</p>
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { item.Id }, new { @class = "btn btn-primary" })
+                <a href="#" class="btn btn-danger" id="delete-btn" data-toggle="modal" data-target="#@item.Id">Xóa</a>
+                <!-- Modal -->
+                <div class="modal fade" id="@item.Id" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title" style="text-align: center">XÁC NHẬN XÓA THÔNG TIN SINH VIÊN</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn có chắc muốn xóa sinh viên @item.RolleNumber - @item.Name không ? </p>
+                                <p class="text-danger"><em>Thao tác này không thể hoàn tác</em></p>
+                            </div>
+                            <div class="modal-footer">
+                                @Html.ActionLink("Xóa", "Delete", new { item.Id }, new { @class = "btn btn-default" })
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Hủy</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>
+
